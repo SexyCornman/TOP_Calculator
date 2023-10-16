@@ -23,19 +23,19 @@ body {
 grid-column: span 2;
 }
 
-button:hover {
+.button:hover {
     background-color: #FFF7D4;
 }
 
-button.clear:hover {
+.button.clear:hover {
     background-color: #C83E4D;
 }
 
-button.delete:hover {
+.button.delete:hover {
     background-color: #C83E4D;
 }
 
-button.equal:hover {
+.button.equal:hover {
     background-color: #0FF4C6;
 }
 
