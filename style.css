@@ -23,6 +23,10 @@ body {
 grid-column: span 2;
 }
 
+button:hover {
+    background-color: #FFF7D4;
+}
+
 .screen {
     flex-direction: column;
     grid-column: 1/-1;
@@ -33,4 +37,20 @@ grid-column: span 2;
     padding: 1rem;
     word-wrap: break-word;
     word-break: break-all;
+}
+
+.previous-num {
+    font-size: 1.25rem;
+}
+
+.current-num {
+    font-size: 2rem;
+}
+
+.footer {
+    font-size: 1rem;
+    color: #FFF7D4 ;
+    text-align: center;
+    background-color:#4C3D3D ;
+    padding: 10px;
 }
