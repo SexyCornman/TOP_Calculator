@@ -27,6 +27,21 @@ button:hover {
     background-color: #FFF7D4;
 }
 
+button.clear:hover {
+    background-color: #C83E4D;
+}
+
+button.delete:hover {
+    background-color: #C83E4D;
+}
+
+button.equal:hover {
+    background-color: #0FF4C6;
+}
+
+
+
+
 .screen {
     flex-direction: column;
     grid-column: 1/-1;
