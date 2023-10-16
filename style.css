@@ -54,11 +54,11 @@ grid-column: span 2;
     word-break: break-all;
 }
 
-.previous-num {
+.previous-operand {
     font-size: 1.25rem;
 }
 
-.current-num {
+.current-operand {
     font-size: 2rem;
 }
 
