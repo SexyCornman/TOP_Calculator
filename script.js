@@ -52,3 +52,16 @@ const currentOperand = document.querySelector('[data-current-operand]');
 clearButtons.addEventListener("click",allClear);
 deleteButtons.addEventListener("click",deleteNum);
 
+numberButtons.forEach(button => {
+    button.addEventListener("click", (e)=>{
+        if (currentOperand.innerText === "0"){
+            currentOperand.innerHTML = button.innerText
+        }
+        else if (currentOperand.innerText.includes(".") && button.innerText === ".") {}
+        else {
+            currentOperand.innerHTML += button.innerText
+        }
+    })
+    
+});
+
