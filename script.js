@@ -1,5 +1,5 @@
 function add() {
-    if(previousOperand.innerText === ""){
+        if(previousOperand.innerText === ""){
     previousOperand.innerText = currentOperand.innerText + "+";
     currentOperand.innerText = "0";
     }
@@ -11,10 +11,15 @@ function add() {
         previousOperand.innerHTML = previousOperand.innerHTML.slice(0, -1);
         previousOperand.innerHTML += "+";
     }
+    
 }
 
 function subtract(){
-    if(previousOperand.innerText === ""){
+    if (currentOperand.innerText === "0"){
+        currentOperand.innerText = "-";
+
+    }
+    else if(previousOperand.innerText === ""){
         previousOperand.innerText = currentOperand.innerText + "-";
         currentOperand.innerText = "0";
         }
@@ -29,7 +34,7 @@ function subtract(){
 
 }
 
-function multiply(){
+function multiply(){    
     if(previousOperand.innerText === ""){
         previousOperand.innerText = currentOperand.innerText + "*";
         currentOperand.innerText = "0";
@@ -46,7 +51,7 @@ function multiply(){
 }
 
 function divide(){
-    if(previousOperand.innerText === ""){
+        if(previousOperand.innerText === ""){
         previousOperand.innerText = currentOperand.innerText + "÷";
         currentOperand.innerText = "0";
         }
@@ -75,8 +80,9 @@ function deleteNum(){
 
 
 function operation(){
-
+    
     if(previousOperand.innerText.includes("=")){}
+  
 
     else if (previousOperand.innerText.includes("+")){
         let result= Number(previousOperand.innerText.slice(0, -1)) + Number(currentOperand.innerText);
