@@ -117,10 +117,12 @@ equalButtons.addEventListener("click",operation);
 
 numberButtons.forEach(button => {
     button.addEventListener("click", (e)=>{
-        if (currentOperand.innerText === "0"){
-            currentOperand.innerHTML = button.innerText
-        }
+        if (currentOperand.innerText === "0" && button.innerText === ".") {}     
+        else if (currentOperand.innerText === "0" && button.innerText === ".") {}
         else if (currentOperand.innerText.includes(".") && button.innerText === ".") {}
+        else if (currentOperand.innerText === "0"){
+            currentOperand.innerHTML = button.innerText            
+        }
         else {
             currentOperand.innerHTML += button.innerText
         }
