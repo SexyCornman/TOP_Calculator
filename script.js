@@ -21,15 +21,23 @@ function divide(){
 
 }
 
-function clear(){
+function allClear(){
     currentOperand.innerText = "0";
     previousOperand.innerText ="";
+}
+
+function deleteNum(){
+    if (currentOperand.innerText.length === 1){
+        currentOperand.innerText = "0";
+    }
+    else {currentOperand.innerText = currentOperand.innerHTML.slice(0, -1);}
 }
 
 function operation(){
 
 
 }
+
 
 
 
@@ -40,4 +48,7 @@ const deleteButtons = document.querySelector('[data-delete]');
 const equalButtons = document.querySelector('[data-equal]');
 const previousOperand = document.querySelector('[data-previous-operand]');
 const currentOperand = document.querySelector('[data-current-operand]');
+
+clearButtons.addEventListener("click",allClear);
+deleteButtons.addEventListener("click",deleteNum);
 
