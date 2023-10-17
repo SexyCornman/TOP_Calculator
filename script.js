@@ -3,6 +3,11 @@ function add() {
     previousOperand.innerText = currentOperand.innerText + "+";
     currentOperand.innerText = "0";
     }
+    else if(previousOperand.innerText.includes("=")){
+        previousOperand.innerText = currentOperand.innerText += "+"
+        currentOperand.innerText = "0";
+
+    }
     else{
         previousOperand.innerHTML = previousOperand.innerHTML.slice(0, -1);
         previousOperand.innerHTML += "+";
@@ -57,14 +62,28 @@ function deleteNum(){
     else {currentOperand.innerText = currentOperand.innerHTML.slice(0, -1);}
 }
 
+
 function operation(){
     if (previousOperand.innerText.includes("+")){
         let result= Number(previousOperand.innerText.slice(0, -1)) + Number(currentOperand.innerText);
         previousOperand.innerText = previousOperand.innerText + currentOperand.innerText + "="
         currentOperand.innerText = result;
     }
-
-
+    else if (previousOperand.innerText.includes("-")){
+        let result= Number(previousOperand.innerText.slice(0, -1)) - Number(currentOperand.innerText);
+        previousOperand.innerText = previousOperand.innerText + currentOperand.innerText + "="
+        currentOperand.innerText = result;
+    }
+    else if (previousOperand.innerText.includes("*")){
+        let result= Number(previousOperand.innerText.slice(0, -1)) * Number(currentOperand.innerText);
+        previousOperand.innerText = previousOperand.innerText + currentOperand.innerText + "="
+        currentOperand.innerText = result;
+    }
+    else if (previousOperand.innerText.includes("÷")){
+        let result= Number(previousOperand.innerText.slice(0, -1)) / Number(currentOperand.innerText);
+        previousOperand.innerText = previousOperand.innerText + currentOperand.innerText + "="
+        currentOperand.innerText = result;
+    }
 }
 
 
@@ -80,6 +99,7 @@ const currentOperand = document.querySelector('[data-current-operand]');
 
 clearButtons.addEventListener("click",allClear);
 deleteButtons.addEventListener("click",deleteNum);
+equalButtons.addEventListener("click",operation);
 
 numberButtons.forEach(button => {
     button.addEventListener("click", (e)=>{
