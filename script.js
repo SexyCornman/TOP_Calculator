@@ -6,7 +6,6 @@ function add() {
     else if(previousOperand.innerText.includes("=")){
         previousOperand.innerText = currentOperand.innerText += "+"
         currentOperand.innerText = "0";
-
     }
     else{
         previousOperand.innerHTML = previousOperand.innerHTML.slice(0, -1);
@@ -19,6 +18,10 @@ function subtract(){
         previousOperand.innerText = currentOperand.innerText + "-";
         currentOperand.innerText = "0";
         }
+        else if(previousOperand.innerText.includes("=")){
+            previousOperand.innerText = currentOperand.innerText += "-"
+            currentOperand.innerText = "0";
+        }     
         else{
             previousOperand.innerHTML = previousOperand.innerHTML.slice(0, -1);
             previousOperand.innerHTML += "-";
@@ -31,6 +34,10 @@ function multiply(){
         previousOperand.innerText = currentOperand.innerText + "*";
         currentOperand.innerText = "0";
         }
+        else if(previousOperand.innerText.includes("=")){
+            previousOperand.innerText = currentOperand.innerText += "*"
+            currentOperand.innerText = "0";
+        }
         else{
             previousOperand.innerHTML = previousOperand.innerHTML.slice(0, -1);
             previousOperand.innerHTML += "*";
@@ -42,6 +49,10 @@ function divide(){
     if(previousOperand.innerText === ""){
         previousOperand.innerText = currentOperand.innerText + "÷";
         currentOperand.innerText = "0";
+        }
+        else if(previousOperand.innerText.includes("=")){
+            previousOperand.innerText = currentOperand.innerText += "÷"
+            currentOperand.innerText = "0";
         }
         else{
             previousOperand.innerHTML = previousOperand.innerHTML.slice(0, -1);
