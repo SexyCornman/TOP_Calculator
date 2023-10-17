@@ -15,11 +15,8 @@ function add() {
 }
 
 function subtract(){
-    if (currentOperand.innerText === "0"){
-        currentOperand.innerText = "-";
-
-    }
-    else if(previousOperand.innerText === ""){
+   
+    if(previousOperand.innerText === ""){
         previousOperand.innerText = currentOperand.innerText + "-";
         currentOperand.innerText = "0";
         }
