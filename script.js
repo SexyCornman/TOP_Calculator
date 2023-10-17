@@ -1,65 +1,21 @@
 function add() {
-        if(previousOperand.innerText === ""){
-    previousOperand.innerText = currentOperand.innerText + "+";
-    currentOperand.innerText = "0";
-    }
-    else if(previousOperand.innerText.includes("=")){
-        previousOperand.innerText = currentOperand.innerText += "+"
-        currentOperand.innerText = "0";
-    }
-    else{
-        previousOperand.innerHTML = previousOperand.innerHTML.slice(0, -1);
-        previousOperand.innerHTML += "+";
-    }
+
     
 }
 
 function subtract(){
    
-    if(previousOperand.innerText === ""){
-        previousOperand.innerText = currentOperand.innerText + "-";
-        currentOperand.innerText = "0";
-        }
-        else if(previousOperand.innerText.includes("=")){
-            previousOperand.innerText = currentOperand.innerText += "-"
-            currentOperand.innerText = "0";
-        }     
-        else{
-            previousOperand.innerHTML = previousOperand.innerHTML.slice(0, -1);
-            previousOperand.innerHTML += "-";
-        }
+ 
 
 }
 
 function multiply(){    
-    if(previousOperand.innerText === ""){
-        previousOperand.innerText = currentOperand.innerText + "*";
-        currentOperand.innerText = "0";
-        }
-        else if(previousOperand.innerText.includes("=")){
-            previousOperand.innerText = currentOperand.innerText += "*"
-            currentOperand.innerText = "0";
-        }
-        else{
-            previousOperand.innerHTML = previousOperand.innerHTML.slice(0, -1);
-            previousOperand.innerHTML += "*";
-        }
+   
 
 }
 
 function divide(){
-        if(previousOperand.innerText === ""){
-        previousOperand.innerText = currentOperand.innerText + "÷";
-        currentOperand.innerText = "0";
-        }
-        else if(previousOperand.innerText.includes("=")){
-            previousOperand.innerText = currentOperand.innerText += "÷"
-            currentOperand.innerText = "0";
-        }
-        else{
-            previousOperand.innerHTML = previousOperand.innerHTML.slice(0, -1);
-            previousOperand.innerHTML += "÷";
-        }
+      
 
 }
 
@@ -78,29 +34,7 @@ function deleteNum(){
 
 function operation(){
     
-    if(previousOperand.innerText.includes("=")){}
   
-
-    else if (previousOperand.innerText.includes("+")){
-        let result= Number(previousOperand.innerText.slice(0, -1)) + Number(currentOperand.innerText);
-        previousOperand.innerText = previousOperand.innerText + currentOperand.innerText + "="
-        currentOperand.innerText = result;
-    }
-    else if (previousOperand.innerText.includes("-")){
-        let result= Number(previousOperand.innerText.slice(0, -1)) - Number(currentOperand.innerText);
-        previousOperand.innerText = previousOperand.innerText + currentOperand.innerText + "="
-        currentOperand.innerText = result;
-    }
-    else if (previousOperand.innerText.includes("*")){
-        let result= Number(previousOperand.innerText.slice(0, -1)) * Number(currentOperand.innerText);
-        previousOperand.innerText = previousOperand.innerText + currentOperand.innerText + "="
-        currentOperand.innerText = result;
-    }
-    else if (previousOperand.innerText.includes("÷")){
-        let result= Number(previousOperand.innerText.slice(0, -1)) / Number(currentOperand.innerText);
-        previousOperand.innerText = previousOperand.innerText + currentOperand.innerText + "="
-        currentOperand.innerText = result;
-    }
 }
 
 
