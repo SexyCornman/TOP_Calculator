@@ -1,23 +1,47 @@
 function add() {
-   result = Number(currentOperand.innerText)+Number(previousOperand.innerText);
-   return result
+    if(previousOperand.innerText === ""){
+    previousOperand.innerText = currentOperand.innerText + "+";
+    currentOperand.innerText = "0";
+    }
+    else{
+        previousOperand.innerHTML = previousOperand.innerHTML.slice(0, -1);
+        previousOperand.innerHTML += "+";
+    }
 }
 
 function subtract(){
-    result = Number(currentOperand.innerText) - Number(previousOperand.innerText);
-   return result
+    if(previousOperand.innerText === ""){
+        previousOperand.innerText = currentOperand.innerText + "-";
+        currentOperand.innerText = "0";
+        }
+        else{
+            previousOperand.innerHTML = previousOperand.innerHTML.slice(0, -1);
+            previousOperand.innerHTML += "-";
+        }
 
 }
 
 function multiply(){
-    result = Number(currentOperand.innerText) * Number(previousOperand.innerText);
-   return result
+    if(previousOperand.innerText === ""){
+        previousOperand.innerText = currentOperand.innerText + "*";
+        currentOperand.innerText = "0";
+        }
+        else{
+            previousOperand.innerHTML = previousOperand.innerHTML.slice(0, -1);
+            previousOperand.innerHTML += "*";
+        }
 
 }
 
 function divide(){
-    result = Number(currentOperand.innerText) / Number(previousOperand.innerText);
-   return result
+    if(previousOperand.innerText === ""){
+        previousOperand.innerText = currentOperand.innerText + "÷";
+        currentOperand.innerText = "0";
+        }
+        else{
+            previousOperand.innerHTML = previousOperand.innerHTML.slice(0, -1);
+            previousOperand.innerHTML += "÷";
+        }
 
 }
 
@@ -34,6 +58,11 @@ function deleteNum(){
 }
 
 function operation(){
+    if (previousOperand.innerText.includes("+")){
+        let result= Number(previousOperand.innerText.slice(0, -1)) + Number(currentOperand.innerText);
+        previousOperand.innerText = previousOperand.innerText + currentOperand.innerText + "="
+        currentOperand.innerText = result;
+    }
 
 
 }
@@ -64,4 +93,15 @@ numberButtons.forEach(button => {
     })
     
 });
+
+operationButtons.forEach(button =>{
+    button.addEventListener("click", e =>{
+        if (button.innerText === "+")add();
+        else if (button.innerText === "-")subtract();
+        else if (button.innerText === "*")multiply();
+        else if (button.innerText === "÷")divide();
+        else{};
+    
+    }) 
+})
 
