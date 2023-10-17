@@ -75,7 +75,10 @@ function deleteNum(){
 
 
 function operation(){
-    if (previousOperand.innerText.includes("+")){
+
+    if(previousOperand.innerText.includes("=")){}
+
+    else if (previousOperand.innerText.includes("+")){
         let result= Number(previousOperand.innerText.slice(0, -1)) + Number(currentOperand.innerText);
         previousOperand.innerText = previousOperand.innerText + currentOperand.innerText + "="
         currentOperand.innerText = result;
