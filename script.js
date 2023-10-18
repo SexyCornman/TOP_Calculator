@@ -1,6 +1,7 @@
 let firstValue ='';
 let secondValue = '';
 let operator = '';
+let displayValue = false;
 
 
 
@@ -39,6 +40,10 @@ function deleteNum(){
 
 
 function operation(){
+    if (operator = "+"){
+        
+        
+    }
     
   
 }
@@ -60,6 +65,12 @@ equalButtons.addEventListener("click",operation);
 
 numberButtons.forEach(button => {
     button.addEventListener("click", (e)=>{
+        if (displayValue === true){
+            previousOperand.innerText = currentOperand.innerText + operator;
+            currentOperand.innerText = "0";
+            displayValue = false;
+        }
+
         if ((currentOperand.innerText === "0" && button.innerText === ".")||   
          (currentOperand.innerText === "0" && button.innerText === ".") ||
          (currentOperand.innerText.includes(".") && button.innerText === ".")||
@@ -76,9 +87,12 @@ numberButtons.forEach(button => {
 });
 
 operationButtons.forEach(button =>{
-    button.addEventListener("click", e =>{      
+    button.addEventListener("click", e =>{         
        operator = button.innerText
+       previousOperand.innerText = currentOperand.innerText + operator;
+       currentOperand.innerText = "0";
        console.log(operator);
+       
     }) 
 })
 
