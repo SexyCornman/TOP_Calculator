@@ -40,11 +40,20 @@ function deleteNum(){
 
 
 function operation(){
-    if (operator = "+"){
-        
+    firstValue = parseFloat(previousOperand.innerText)
+    secondValue = parseFloat(currentOperand.innerText)
+    
+    if (operator === ""||
+    displayValue === true){}
+
+    
+    else if (operator === "+"){
+        previousOperand.innerText = firstValue + operator + secondValue    
+        currentOperand.innerText = add(firstValue,secondValue);
         
     }
     
+    displayValue = true;
   
 }
 
@@ -87,10 +96,10 @@ numberButtons.forEach(button => {
 });
 
 operationButtons.forEach(button =>{
-    button.addEventListener("click", e =>{         
+    button.addEventListener("click", e =>{ 
+        operation();        
        operator = button.innerText
-       previousOperand.innerText = currentOperand.innerText + operator;
-       currentOperand.innerText = "0";
+       previousOperand.innerText = currentOperand.innerText + operator;       
        console.log(operator);
        
     }) 
