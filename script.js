@@ -98,16 +98,19 @@ numberButtons.forEach(button => {
             displayValue = false;
         }
 
-        if ((currentOperand.innerText === "0" && button.innerText === ".")||   
-         (currentOperand.innerText === "0" && button.innerText === ".") ||
-         (currentOperand.innerText.includes(".") && button.innerText === ".")||
+        if (currentOperand.innerText === "0" && button.innerText === "."){
+            currentOperand.innerText ="0."
+        }
+
+        else if ((currentOperand.innerText.includes(".") && button.innerText === ".")||
          (currentOperand.innerText.length > 15)){}
         
+        
          else if (currentOperand.innerText === "0"){
-            currentOperand.innerHTML = button.innerText            
+            currentOperand.innerText = button.innerText            
         }
         else {
-            currentOperand.innerHTML += button.innerText
+            currentOperand.innerText += button.innerText
         }
     })
     
