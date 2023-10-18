@@ -81,7 +81,7 @@ operationButtons.forEach(button =>{
         else if (button.innerText === "-")subtract();
         else if (button.innerText === "*")multiply();
         else if (button.innerText === "÷")divide();
-        else{};
+       
     
     }) 
 })
