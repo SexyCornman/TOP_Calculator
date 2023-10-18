@@ -75,6 +75,10 @@ function operation(){
   
 }
 
+function plusMinus() {
+    currentOperand.innerHTML = parseFloat(currentOperand.innerHTML)*(-1);
+}
+
 
 
 
@@ -90,6 +94,7 @@ const currentOperand = document.querySelector('[data-current-operand]');
 clearButtons.addEventListener("click",allClear);
 deleteButtons.addEventListener("click",deleteNum);
 equalButtons.addEventListener("click",operation);
+plusMinusButton.addEventListener("click",plusMinus);
 
 numberButtons.forEach(button => {
     button.addEventListener("click", (e)=>{
