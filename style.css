@@ -50,6 +50,10 @@ grid-column: span 2;
     background-color: #F99417;
 }
 
+.button.plus-minus:hover {
+    background-color: #52c3e0;
+}
+
 
 
 .screen {
