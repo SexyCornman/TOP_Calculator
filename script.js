@@ -28,7 +28,7 @@ function allClear(){
     previousOperand.innerText ="";
      firstValue ='';
      secondValue = '';
-     operator = undefined;
+     operator = "";
 }
 
 function deleteNum(){
