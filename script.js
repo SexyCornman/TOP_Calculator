@@ -52,6 +52,24 @@ function operation(){
         currentOperand.innerText = add(firstValue,secondValue);
         
     }
+
+    else if (operator === "-"){
+        previousOperand.innerText = firstValue + operator + secondValue    
+        currentOperand.innerText = subtract(firstValue,secondValue);
+        
+    }
+
+    else if (operator === "*"){
+        previousOperand.innerText = firstValue + operator + secondValue    
+        currentOperand.innerText = multiply(firstValue,secondValue);
+        
+    }
+
+    else if (operator === "÷"){
+        previousOperand.innerText = firstValue + operator + secondValue    
+        currentOperand.innerText = divide(firstValue,secondValue);
+        
+    }
     
     displayValue = true;
   
