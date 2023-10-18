@@ -6,31 +6,28 @@ let operator = undefined;
 
 
 function add(firstValue,secondValue) {
-    return firstValue + secondValue;
-   
+    return firstValue + secondValue;   
 }
 
 function subtract(firstValue,secondValue){
-    return firstValue - secondValue;
-    
+    return firstValue - secondValue;    
 
 }
 
 function multiply(firstValue,secondValue){    
-    return firstValue * secondValue;
-    
-
+    return firstValue * secondValue; 
 }
 
 function divide(firstValue,secondValue){
-    return firstValue / secondValue;
-    
-
+    return firstValue / secondValue;   
 }
 
 function allClear(){
     currentOperand.innerText = "0";
     previousOperand.innerText ="";
+     firstValue ='';
+     secondValue = '';
+     operator = undefined;
 }
 
 function deleteNum(){
