@@ -5,24 +5,26 @@ let operator = undefined;
 
 
 
-function add() {
+function add(firstValue,secondValue) {
+    return firstValue + secondValue;
+   
+}
 
+function subtract(firstValue,secondValue){
+    return firstValue - secondValue;
     
-}
-
-function subtract(){
-   
- 
 
 }
 
-function multiply(){    
-   
+function multiply(firstValue,secondValue){    
+    return firstValue * secondValue;
+    
 
 }
 
-function divide(){
-      
+function divide(firstValue,secondValue){
+    return firstValue / secondValue;
+    
 
 }
 
