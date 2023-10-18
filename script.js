@@ -1,6 +1,6 @@
 let firstValue ='';
 let secondValue = '';
-let operator = undefined;
+let operator = '';
 
 
 
@@ -76,13 +76,9 @@ numberButtons.forEach(button => {
 });
 
 operationButtons.forEach(button =>{
-    button.addEventListener("click", e =>{
-        if (button.innerText === "+")add();
-        else if (button.innerText === "-")subtract();
-        else if (button.innerText === "*")multiply();
-        else if (button.innerText === "÷")divide();
-       
-    
+    button.addEventListener("click", e =>{      
+       operator = button.innerText
+       console.log(operator);
     }) 
 })
 
