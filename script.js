@@ -1,3 +1,10 @@
+let firstValue ='';
+let secondValue = '';
+let operator = undefined;
+
+
+
+
 function add() {
 
     
